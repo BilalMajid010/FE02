@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #1d4ed8;
+    margin-bottom: 5px;
+}
+
+.form-section,
+.employee-section,
+.report-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button + button {
+    margin-left: 5px;
+}
+
+#cancelButton {
+    background: #64748b;
+}
+
+#message {
+    margin-top: 12px;
+    color: #15803d;
+}
+
+#message.error {
+    color: #dc2626;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #eff6ff;
+}
+
+td button {
+    margin: 3px;
+}
+
+td button[data-action="delete"] {
+    background: #dc2626;
+}
+
+#reportOutput {
+    margin-top: 15px;
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+@media (max-width: 700px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-section {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}

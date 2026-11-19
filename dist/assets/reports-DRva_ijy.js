@@ -1,0 +1,2 @@
+function e(e,t){let n=t.map(t=>{let n=e.filter(e=>e.departmentId===t.id).length;return`${t.name}: ${n} employee(s)`});return[`EMPLOYEE DEPARTMENT REPORT`,`Generated: ${new Date().toLocaleDateString(`en-GB`)}`,``,...n,``,`Total Employees: ${e.length}`].join(`
+`)}export{e as generateDepartmentReport};
